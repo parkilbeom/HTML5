@@ -35,31 +35,28 @@ body {
 .main{
   background: lightgreen;
   height: 50vh;
-  display: flow-root;
-  padding: 0 15px;
+  display: flex;
+  flex-direction: row;
+
 }
 /* .main::after{
   content: "";
   clear: both;
 } */
-.group{
-  margin: 0 15px;
-}
+
 .group1{
   background-color: violet;
   width: 250px;
-  float: left;
   
 }
 .group2{
   background-color: salmon;
   width: 380px;
-  float: left;
+
 }
 .group3{
   background-color: gold;
   width: 190px;
-  float: left;
   
 }
 /* 슬로건 */
