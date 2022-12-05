@@ -1,9 +1,12 @@
 @import url(./normalize.css);
 @import url(./reset.css);
 /* 기본 스타일 */
-*, *::before, *::after{
+*, 
+*::before, 
+*::after{
   box-sizing: border-box;
 }
+
 
 /* 본문 스타일 */
 body {
@@ -22,10 +25,39 @@ body {
 }
 /* 헤더 */
 .header{
-  background: pink;
+  background: #fff;
   padding: 0 30px;
   height: 15vh;
+  border-radius: 0 0 15px 15px;
 }
+.member{
+  background-color: pink;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+}
+
+/* :before / ::before -> first child */
+/* :after / ::after -> last child */
+/* 우선순위 규칙
+li 라인타입셀렉터 1점
+클래서. 클래스 셀럭터 10점
+아이디 # 아이디셀렉터 100점 */
+
+/* .member li::before{
+  content: ":";
+}
+.member li:first-child(2)::before{
+  content: "";
+} */
+.member li:nth-child(n+2)::before {
+  content: ":";
+  background-color: skyblue;
+}
+.member li:nth-child(n+2):nth-child(-n+4) {
+  background-color: yellow;
+}
+
 /* 비주얼 */
 .visual{
   background: orange;
