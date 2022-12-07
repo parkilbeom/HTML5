@@ -103,7 +103,10 @@ body {
   padding-left: 230px;
   height: 47px;
 }
+
+
 .menu-item{
+  position: relative;
   float: left;
   border-left:2px solid #fff;
 }
@@ -117,7 +120,6 @@ body {
   font-weight: 700;
   color: #fff;
   text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
-
 
 }
 /* 구체성 -> 20점 */
@@ -133,7 +135,17 @@ body {
 .sub-menu{
   background-color: pink;
   position: absolute;
+  left: 0;
+  top: 47px;
   display: none;
+}
+
+.is-active .sub-menu{
+  display: block;
+}
+.sub-menu li{
+  display: inline-block;
+  padding: 1em;
 }
 /* background-color -> 배경색
 background-image -> 배경 이미지
