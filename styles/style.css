@@ -325,9 +325,25 @@ body {
 .sign {
   background-color: white;
   border-radius: 0 0 5px 5px;
-  padding: 0 10px 10px 10px;
+  padding: 4px 10px;
   display: flex;
-  justify-content: ;
+  justify-content: space-between;
+  flex-flow:row nowrap;
+}
+
+
+.sign a::before {
+  content: "\e803";
+  font-family: "fontello";
+  color: orangered;
+  margin-right: 8px;
+
+}
+
+.sign a{
+  display: block;
+  padding: 6px 0;
+  letter-spacing: -1px;
 }
 
 .user-email,.user-pw {
