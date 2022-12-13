@@ -1,6 +1,7 @@
 @import url(./fontello.css);
 @import url(./normalize.css);
 @import url(./reset.css);
+@import url(./module.css);
 
 /* 숨김 콘텐츠 */
 .a11y-hidden,
@@ -491,6 +492,7 @@ body {
   flex-grow: 1;
   min-width: 0;
   width: 100%;
+  font-size: 1.2rem;
 }
 
 .search-button {
@@ -503,6 +505,146 @@ body {
   padding: 0 10px;
   font-size: 1.2rem;
 }
+
+/* 공지사항 및 자료실 */
+.board {
+  margin-top: 20px;
+  position: relative;
+}
+
+.tab-list {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.tab {
+  border: 1px solid #aaa;
+  background-color: #ccc;
+  border-radius: 5px 5px 0 0;
+  padding: 5px 10px;
+  color: #666;
+}
+
+.is-select.tab {
+  background-color: #fff;
+  color: #e85e2c;
+  border-color: currentColor currentColor #fff currentColor;
+}
+
+.tab-panel {
+  display: none;
+  margin-top: 15px;
+}
+
+.is-select.tab-panel {
+  display: block;
+}
+
+.board-list li {
+  margin-top: 10px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.board-list a {
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.board-list time {
+  flex-shrink: 0;
+  margin-left: 10px;
+}
+
+.board-more {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  padding: 8px;
+}
+
+.icon-plus::before {
+  color: hsla(110, 50%, 30%, 1);
+}
+
+/* 새소식 */
+.news {
+  margin-top: 20px;
+  position: relative;
+}
+
+.news::before {
+  content: "";
+  position: absolute;
+  top: 35px;
+  left: 0;
+  width: 80%;
+  height: 1px;
+  background: #aaa linear-gradient(to right, #ccc, #fff);
+}
+
+.news-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.news-link {
+  display: block;
+}
+
+.news-item {
+  margin-top: 35px;
+  /* padding-left: 130px; */
+  position: relative;
+  display: flow-root;
+}
+
+.news-item-title {
+  font-weight: 500;
+  width: 250px;
+  float: right;
+}
+
+.news-item-date {
+  display: block;
+  margin: 5px 0 10px;
+  width: 250px;
+  float: right;
+}
+.news-item-brief {
+  line-height: 1.5;
+  width: 250px;
+  float: right;
+}
+
+.news-item-thumbnail {
+  /* position: absolute;
+  top: 3px;
+  left: 0; */
+  /* text-align: center; */
+}
+
+.news-item-thumbnail img {
+  box-shadow: 0 15px 10px 5px #ccc;
+  margin-bottom: 15px;
+}
+
+.news-item-thumbnail figcaption {
+  width: 112px;
+  text-align: center;
+}
+
+.news-more {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  padding: 8px;
+}
+
+/* 신규 이벤트 및 관련 사이트 */
 
 /* 슬로건 */
 .slogan {
